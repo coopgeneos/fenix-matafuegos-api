@@ -1,0 +1,61 @@
+/**
+ * Extinguisher.js
+ *
+ * @description :: A model definition represents a database table/collection.
+ * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
+ */
+
+module.exports = {
+
+  attributes: {
+    code: {
+      type: 'string',
+      required: true,
+      unique: true
+    },
+    customer: {
+      model: 'customer',
+      required: true
+    },
+    type: {
+      model: 'extinguisherType',
+      required: true
+    },
+    category: {
+      type: 'string',
+      isIn: ['categ1', 'categ2'],
+    },
+    location: {
+      type: 'string'
+    },
+    costCenter: {
+      type: 'string'
+    },
+    address: {
+      type: 'string'
+    },
+    factoryNo: {
+      type: 'number'
+    },
+    bvNo: {
+      type: 'number'
+    },
+    manufacturingDate: {
+      type: 'ref',
+      columnType: 'datetime',
+      required: true
+    },
+    lastLoad: {
+      type: 'ref',
+      columnType: 'datetime',
+      required: true
+    },
+    lastHydraulicTest: {
+      type: 'ref',
+      columnType: 'datetime',
+      required: true
+    },
+  },
+
+};
+
