@@ -26,8 +26,12 @@ module.exports.routes = {
 
 	/* Rutas relativas a login */
   'post /login': 'AuthController.login',
-	'/logout': 'AuthController.logout',
-
+  '/logout': 'AuthController.logout',
+  
+  /* Rutas relativas a la facturación */
+  'get /workorder/toinvoice': 'WorkOrderController.ordersToInvoice',
+  'post /workorder/invoice': 'WorkOrderController.invoiceOrders',
+  'get /workorder/print': 'WorkOrderController.printOrder',
 
   /***************************************************************************
   *                                                                          *

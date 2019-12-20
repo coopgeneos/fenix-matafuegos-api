@@ -5,8 +5,8 @@ module.exports = {
     passport.authenticate('local', function(err, user, info){
       if((err) || (!user)) {
         return res.send({
-          message: info.message,
-          user
+          error: true,
+          message: err || info.message
         });
       }
       req.logIn(user, function(err) {

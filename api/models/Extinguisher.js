@@ -21,9 +21,12 @@ module.exports = {
       model: 'extinguisherType',
       required: true
     },
+    idCar: {
+      type: 'string'
+    },
     category: {
       type: 'string',
-      isIn: ['categ1', 'categ2'],
+      isIn: ['VEHICULAR', 'DOMICILIARIO'],
     },
     location: {
       type: 'string'

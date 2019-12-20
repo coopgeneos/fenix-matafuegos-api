@@ -22,7 +22,7 @@ passport.use(new LocalStrategy({
 			
 			bcrypt.compare(_password, user.password, function(err, res) {
 				if(err)
-					return cb(null, false, { error: true, message: 'Login error' });
+					return cb(null, false, { error: true, message: err });
 				if(!res) 
 					return cb(null, false, { error: true, message: 'Invalid Password' });
 																											 

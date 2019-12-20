@@ -19,7 +19,7 @@ module.exports.policies = {
 
   '*': true,
 
-  'AuthController': {
+  /*'AuthController': {
     'logout': ['isAuthenticated']
   },
 
@@ -29,6 +29,6 @@ module.exports.policies = {
 
   'UserController': {
     '*': ['isAuthenticated']
-  }
+  }*/
 
 };

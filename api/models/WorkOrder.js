@@ -21,14 +21,45 @@ module.exports = {
       model: 'extinguisher',
       required: true
     },
+    toDoList: {
+      type: 'string',
+      required: true,
+    },
+    doneList: {
+      type: 'string',
+    },
+    doneBy: {
+      model: 'user'
+    },
+    doneDate: {
+      type: 'ref',
+      columnType: 'datetime',
+    },
     closeBy: {
       model: 'user'
     },
     closeDate: {
       type: 'ref',
       columnType: 'datetime',
-      required: true
     },
+    cancelNote: {
+      type: 'string',
+    },
+    invoiceNo: {
+      type: 'string',
+    },
+    invoiceDate: {
+      type: 'ref',
+      columnType: 'datetime',
+    },
+    invoiceNote: {
+      type: 'string',
+    },
+    state: {
+      type: 'string',
+      isIn: ['CREADA', 'COMPLETANDOSE', 'CERRADA', 'CANCELADA', 'FACTURADA'],
+      defaultsTo: 'created'
+    }
   },
 
 };

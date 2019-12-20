@@ -38,7 +38,7 @@ module.exports = {
     type: {
       type: 'string',
       required: true,
-      isIn: ['vehicular', 'empresa']
+      isIn: ['EMPRESA', 'PARTICULAR']
     },
   },
 

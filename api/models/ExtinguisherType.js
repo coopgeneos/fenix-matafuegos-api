@@ -15,7 +15,7 @@ module.exports = {
     },
     category:{
       type: 'string',
-      isIn: ['categ1', 'categ2']
+      isIn: ['A','ABC','AC','AB','BC','ABCD','D','K']
     },
     loadExpiration: {
       type: 'number',

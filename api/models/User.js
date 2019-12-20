@@ -17,14 +17,14 @@ module.exports = {
     },
     role: {
       type: 'string',
-      isIn: ['admin', 'operario',],
+      isIn: ['ADMIN', 'OPERARIO'],
     }
   },
-	
+
   customToJSON: function() {
     return _.omit(this, ['password'])
   },
-	
+
   beforeCreate: function(user, cb){
     bcrypt.genSalt(10, function(err, salt){
       bcrypt.hash(user.password, salt, null, function(err, hash){
@@ -48,4 +48,4 @@ module.exports = {
       return cb();
     }
   }
-}; 
+};
