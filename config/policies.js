@@ -19,8 +19,9 @@ module.exports.policies = {
 
   '*': true,
 
-  /*'AuthController': {
-    'logout': ['isAuthenticated']
+  'AuthController': {
+    'logout': ['isAuthenticated'],
+    'isAdmin': ['isAuthenticated']
   },
 
   'CountController': {
@@ -28,7 +29,30 @@ module.exports.policies = {
   },
 
   'UserController': {
-    '*': ['isAuthenticated']
-  }*/
+    'find':  ['isAuthenticated'],
+    '*': ['isAuthenticated', 'isAdmin']
+  },
+
+  'CustomerController': {
+    'find': ['isAuthenticated'],
+    '*': ['isAuthenticated', 'isAdmin']
+  },
+
+  'ExtinguisherController': {
+    'find':  ['isAuthenticated'],
+    '*': ['isAuthenticated', 'isAdmin']
+  },
+
+  'ExtinguisherTypeController': {
+    'update': ['isAuthenticated'],
+    '*': ['isAuthenticated', 'isAdmin']
+  },
+
+  'WorkOrderController': {
+    'update': ['isAuthenticated'],
+    'find': ['isAuthenticated'],
+    'findOne': ['isAuthenticated'],
+    '*': ['isAuthenticated', 'isAdmin']
+  }
 
 };

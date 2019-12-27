@@ -22,7 +22,7 @@ module.exports = {
       res.ok({count: count});
 
     } catch(err) {
-      res.serverError('database_error', error);
+      res.serverError('database_error', err);
     }
   }
 };
