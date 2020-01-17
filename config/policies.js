@@ -39,6 +39,7 @@ module.exports.policies = {
   },
 
   'ExtinguisherController': {
+    'print': true,
     'find':  ['isAuthenticated'],
     '*': ['isAuthenticated', 'isAdmin']
   },
