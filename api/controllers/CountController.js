@@ -18,6 +18,9 @@ module.exports = {
 
       delete criteria.modelName;
 
+      // Borrado del campo force si es que viene
+      criteria.force ? delete criteria.force : criteria.deleted = true;
+
       let count = await Model.count(criteria);
       res.ok({count: count});
 

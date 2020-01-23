@@ -8,11 +8,11 @@
 module.exports = {
 
   attributes: {
-    code: {
+    /* code: {
       type: 'string',
       required: true,
       unique: true
-    },
+    }, */
     name: {
       type: 'string',
       required: true,
@@ -24,7 +24,7 @@ module.exports = {
     phone: {
       type: 'string',
       required: true,
-      unique: true
+      // unique: true
     },
     email: {
       type: 'string',

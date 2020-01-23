@@ -37,7 +37,8 @@ module.exports.http = {
 			'session',
 			'passportInit',
 			'passportSession',
-			'bodyParser',
+      'bodyParser',
+      'softDelete',
 			'compress',
 			'poweredBy',
 			'router',
@@ -58,6 +59,18 @@ module.exports.http = {
     //   var middlewareFn = skipper({ strict: true });
     //   return middlewareFn;
     // })(),
+
+    softDelete: (function (){
+      return function (req,res,next) {
+        if(req.method == "DELETE") {
+          req.method = "PATCH";
+          req.body = {deleted: true}
+          next();
+        } else {
+          next()
+        }
+      };
+    })(),
 
   },
 

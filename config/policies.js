@@ -29,6 +29,7 @@ module.exports.policies = {
   },
 
   'UserController': {
+    'create': true,
     'find':  ['isAuthenticated'],
     '*': ['isAuthenticated', 'isAdmin']
   },
@@ -39,7 +40,7 @@ module.exports.policies = {
   },
 
   'ExtinguisherController': {
-    'print': true,
+    // 'print': true,
     'find':  ['isAuthenticated'],
     '*': ['isAuthenticated', 'isAdmin']
   },

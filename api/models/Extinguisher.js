@@ -11,7 +11,7 @@ module.exports = {
     code: {
       type: 'string',
       required: true,
-      unique: true
+      // unique: true
     },
     customer: {
       model: 'customer',

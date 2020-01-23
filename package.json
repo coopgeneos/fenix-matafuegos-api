@@ -18,6 +18,7 @@
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "sails": "^1.2.3",
+    "sails-hook-custom-blueprints": "^1.0.0",
     "sails-hook-grunt": "^4.0.0",
     "sails-hook-orm": "^2.1.1",
     "sails-hook-sockets": "^2.0.0",

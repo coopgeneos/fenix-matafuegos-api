@@ -1,7 +1,7 @@
 module.exports = {
   ordersToInvoice: function(req, res) {
     let _SQL = `
-      SELECT wo.id, wo.orderNo, wo.customer as customerId, c.name as customerName, e.code as extinguisherCode, e.costCenter , wo.doneList
+      SELECT wo.id, wo.customer as customerId, c.name as customerName, e.code as extinguisherCode, e.costCenter , wo.doneList
       FROM workorder wo
       JOIN extinguisher e on (wo.extinguisher = e.id)
       JOIN customer c on(wo.customer = c.id)

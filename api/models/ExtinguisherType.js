@@ -8,11 +8,11 @@
 module.exports = {
 
   attributes: {
-    code: {
+    /* code: {
       type: 'string',
       required: true,
       unique: true
-    },
+    }, */
     category:{
       type: 'string',
       isIn: ['A','ABC','AC','AB','BC','ABCD','D','K']

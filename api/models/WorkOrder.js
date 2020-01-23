@@ -8,11 +8,11 @@
 module.exports = {
 
   attributes: {
-    orderNo: {
+    /* orderNo: {
       type: 'number',
       required: true,
       unique: true
-    },
+    }, */
     customer: {
       model: 'customer',
       required: true
@@ -58,7 +58,7 @@ module.exports = {
     state: {
       type: 'string',
       isIn: ['CREADA', 'COMPLETANDOSE', 'CERRADA', 'CANCELADA', 'FACTURADA'],
-      defaultsTo: 'created'
+      defaultsTo: 'CREADA'
     }
   },
 
