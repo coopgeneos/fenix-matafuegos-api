@@ -16,7 +16,7 @@ passport.use(new LocalStrategy({
 		usernameField: 'username',
 		passwordField: 'password'
 	}, function(_username, _password, cb){
-		User.findOne({username: _username}, function(err, user){
+		User.findOne({username: _username, deleted: false}, function(err, user){
 			if(err) return cb(err);
 			if(!user) return cb(null, false, { error: true, message: 'Username not found'});
 			

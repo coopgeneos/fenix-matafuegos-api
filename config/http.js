@@ -64,7 +64,7 @@ module.exports.http = {
       return function (req,res,next) {
         if(req.method == "DELETE") {
           req.method = "PATCH";
-          req.body = {deleted: true}
+          req.body = {deleted: true, deletedAt: new Date()}
           next();
         } else {
           next()
