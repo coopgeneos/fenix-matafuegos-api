@@ -149,8 +149,12 @@ module.exports = {
     ***************************************************************************/
     cors: {
       allRoutes: true,
-      // allowCredentials: true,
-      // allowOrigins: [process.env.CORS]
+      allowCredentials: true,
+      allowOrigins: [
+        'https://fenix.geneoscoop.ddns.net',
+        'https://geneoscoop.ddns.net:8084', 
+        'http://dev.geneoscoop:4200'
+      ]
     },
 
 
@@ -251,7 +255,7 @@ module.exports = {
     * > Be sure to use the right protocol!  ("http://" vs. "https://")         *
     *                                                                          *
     ***************************************************************************/
-    onlyAllowOrigins: ["http://example.com"],
+    onlyAllowOrigins: ["http://dev.geneoscoop"],
 
 
     /***************************************************************************
@@ -369,7 +373,7 @@ module.exports = {
   *                                                                         *
   ***************************************************************************/
   custom: {
-    baseUrl: 'https://example.com',
+    baseUrl: 'https://fenix-test.herokuapp.com/',
     internalEmailAddress: 'support@example.com',
 
     // mailgunDomain: 'mg.example.com',
