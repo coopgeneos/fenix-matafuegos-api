@@ -49,6 +49,7 @@ module.exports = {
     default: {
       adapter: 'sails-postgresql',
       url: process.env.DATABASE_URL,
+      ssl: true,
       //--------------------------------------------------------------------------
       //  /\   To avoid checking it in to version control, you might opt to set
       //  ||   sensitive credentials like `url` using an environment variable.
@@ -89,7 +90,7 @@ module.exports = {
     * https://sailsjs.com/docs/concepts/models-and-orm/model-settings#?migrate *
     *                                                                          *
     ***************************************************************************/
-    migrate: 'alter',
+    migrate: 'safe',
 
     /***************************************************************************
     *                                                                          *
@@ -148,8 +149,8 @@ module.exports = {
     ***************************************************************************/
     cors: {
       allRoutes: true,
-      allowCredentials: true,
-      allowOrigins: [process.env.CORS]
+      // allowCredentials: true,
+      // allowOrigins: [process.env.CORS]
     },
 
 
@@ -319,7 +320,7 @@ module.exports = {
     * (https://sailsjs.com/config/http)                                        *
     *                                                                          *
     ***************************************************************************/
-    // trustProxy: true,
+    trustProxy: true,
 
   },
 

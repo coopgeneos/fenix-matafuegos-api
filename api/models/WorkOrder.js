@@ -33,14 +33,14 @@ module.exports = {
     },
     doneDate: {
       type: 'ref',
-      columnType: 'datetime',
+      columnType: 'date',
     },
     closeBy: {
       model: 'user'
     },
     closeDate: {
       type: 'ref',
-      columnType: 'datetime',
+      columnType: 'date',
     },
     cancelNote: {
       type: 'string',
@@ -50,7 +50,7 @@ module.exports = {
     },
     invoiceDate: {
       type: 'ref',
-      columnType: 'datetime',
+      columnType: 'date',
     },
     invoiceNote: {
       type: 'string',

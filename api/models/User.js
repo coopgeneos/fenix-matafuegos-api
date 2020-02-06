@@ -21,6 +21,8 @@ module.exports = {
     }
   },
 
+  tableName: 'userx',
+
   customToJSON: function() {
     return _.omit(this, ['password'])
   },

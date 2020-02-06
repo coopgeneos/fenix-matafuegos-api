@@ -45,17 +45,17 @@ module.exports = {
     },
     manufacturingDate: {
       type: 'ref',
-      columnType: 'datetime',
+      columnType: 'date',
       required: true
     },
     lastLoad: {
       type: 'ref',
-      columnType: 'datetime',
+      columnType: 'date',
       required: true
     },
     lastHydraulicTest: {
       type: 'ref',
-      columnType: 'datetime',
+      columnType: 'date',
       required: true
     },
   },
