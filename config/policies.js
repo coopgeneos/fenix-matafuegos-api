@@ -19,7 +19,7 @@ module.exports.policies = {
 
   '*': true,
 
-  'AuthController': {
+  /* 'AuthController': {
     'logout': ['isAuthenticated'],
     'isAdmin': ['isAuthenticated']
   },
@@ -61,6 +61,6 @@ module.exports.policies = {
   'JobController': {
     'find': ['isAuthenticated'],
     '*' : false
-  }
+  } */
 
 };
