@@ -13,6 +13,15 @@ module.exports = {
       required: true,
       unique: true
     }, */
+    cNumber: { //Nro de cliente generado en otro sistema
+      type: 'number',
+      required: true,
+      // unique: true
+    },
+    cuit: {
+      type: 'number',
+      // unique: true,
+    },
     name: {
       type: 'string',
       required: true,
@@ -23,12 +32,9 @@ module.exports = {
     },
     phone: {
       type: 'string',
-      required: true,
-      // unique: true
     },
     email: {
       type: 'string',
-      required: true,
       isEmail: true
     },
     web: {
