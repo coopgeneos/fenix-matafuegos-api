@@ -61,6 +61,16 @@ module.exports.policies = {
   'JobController': {
     'find': ['isAuthenticated'],
     '*' : false
-  }
+  },
+
+  'MarkController': {
+    'find': ['isAuthenticated'],
+    '*' : false
+  },
+
+  'CategoryExtTypeController': {
+    'find': ['isAuthenticated'],
+    '*' : false
+  },
 
 };

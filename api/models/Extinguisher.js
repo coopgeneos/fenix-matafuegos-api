@@ -8,10 +8,10 @@
 module.exports = {
 
   attributes: {
-    code: {
-      type: 'string',
+    extinguisherNo: {
+      type: 'number',
       required: true,
-      // unique: true
+      unique: true,
     },
     customer: {
       model: 'customer',
@@ -31,14 +31,14 @@ module.exports = {
     location: {
       type: 'string'
     },
+    locationNo: {
+      type: 'number',
+    },
     costCenter: {
       type: 'string'
     },
     address: {
       type: 'string'
-    },
-    factoryNo: {
-      type: 'number'
     },
     bvNo: {
       type: 'number'
@@ -58,6 +58,13 @@ module.exports = {
       columnType: 'date',
       required: true
     },
+    dps: {
+      type: 'string'
+    },
+    mark: {
+      type: 'string',
+      required: true,
+    }
   },
 
 };
