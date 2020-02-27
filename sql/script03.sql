@@ -25,4 +25,10 @@ CREATE TABLE mark
   CONSTRAINT mark_pkey PRIMARY KEY (id)
 );
 
+ALTER TABLE workorder ADD COLUMN reception date;
+ALTER TABLE workorder ADD COLUMN delivery date;
+ALTER TABLE workorder ADD COLUMN "partialLoad" real DEFAULT NULL;
 
+INSERT INTO job ("createdAt", "updatedAt", deleted, name) values (now(), now(), false, 'Tobera');
+INSERT INTO job ("createdAt", "updatedAt", deleted, name) values (now(), now(), false, 'Carga parcial');
+INSERT INTO job ("createdAt", "updatedAt", deleted, name) values (now(), now(), false, 'Pintura');

@@ -59,6 +59,17 @@ module.exports = {
       type: 'string',
       isIn: ['CREADA', 'COMPLETANDOSE', 'CERRADA', 'CANCELADA', 'FACTURADA'],
       defaultsTo: 'CREADA'
+    },
+    reception: {
+      type: 'ref',
+      columnType: 'date',
+    },
+    delivery: {
+      type: 'ref',
+      columnType: 'date',
+    },
+    partialLoad: {
+      type: 'number'
     }
   },
 
