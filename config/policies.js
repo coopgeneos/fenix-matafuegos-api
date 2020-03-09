@@ -68,9 +68,10 @@ module.exports.policies = {
     '*' : false
   },
 
-  'CategoryExtTypeController': {
-    'find': ['isAuthenticated'],
-    '*' : false
+  'ConfigurationController': {
+    'findOne' : ['isAdmin'],
+    'update' : ['isAdmin'],
+    '*' : false,
   },
 
 };

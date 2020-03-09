@@ -32,6 +32,8 @@ module.exports.routes = {
   /* Rutas relativas a la facturación */
   'get /workorder/toinvoice': 'WorkOrderController.ordersToInvoice',
   'post /workorder/invoice': 'WorkOrderController.invoiceOrders',
+  'get /workorder/toprint': 'WorkOrderController.ordersToPrint',
+  'post /workorder/print': 'WorkOrderController.printOrders',
 
   /* Rutas relativas a Matafuegos */
   'get /extinguisher/print': 'ExtinguisherController.print',

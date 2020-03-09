@@ -57,7 +57,7 @@ module.exports = {
     },
     state: {
       type: 'string',
-      isIn: ['CREADA', 'COMPLETANDOSE', 'CERRADA', 'CANCELADA', 'FACTURADA'],
+      isIn: ['CREADA', 'CERRADA', 'IMPRESA', 'FACTURADA', 'CANCELADA'],
       defaultsTo: 'CREADA'
     },
     reception: {
