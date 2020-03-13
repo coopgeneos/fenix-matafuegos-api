@@ -33,6 +33,7 @@ module.exports = {
     },
     locationNo: {
       type: 'number',
+      allowNull: true
     },
     costCenter: {
       type: 'string'
@@ -41,7 +42,8 @@ module.exports = {
       type: 'string'
     },
     bvNo: {
-      type: 'number'
+      type: 'number',
+      allowNull: true
     },
     manufacturingDate: {
       type: 'ref',

@@ -69,7 +69,8 @@ module.exports = {
       columnType: 'date',
     },
     partialLoad: {
-      type: 'number'
+      type: 'number',
+      allowNull: true
     }
   },
 
