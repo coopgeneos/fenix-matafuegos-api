@@ -35,7 +35,7 @@ async function assignDPS(_id, conf) {
     let seq_dps = await Configuration.nextDps(conf, category);
     await Extinguisher.update({id: extinguisher.id}).set({dps: seq_dps});
     await WorkOrder.update({id: order.id}).set({state: 'IMPRESA'});
-    return;
+    return extinguisher.id;
   } catch(err) {
     throw new Error(err)
   }
@@ -129,7 +129,7 @@ module.exports = {
 
       let values = await Promise.all(promises);
     
-      let pdfStream = await sails.helpers.dpsPrinter(ids);
+      let pdfStream = await sails.helpers.dpsPrinter(values);
       res.setHeader('Content-Type', 'application/pdf');
       res.setHeader('Content-Disposition', `attachment; filename=impresiondps.pdf`);
       pdfStream.pipe(res);
