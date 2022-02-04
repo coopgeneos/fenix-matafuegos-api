@@ -18,7 +18,7 @@ module.exports.policies = {
   ***************************************************************************/
 
   '*': true,
-
+  /*
   'AuthController': {
     'logout': ['isAuthenticated'],
     'isAdmin': ['isAuthenticated']
@@ -73,5 +73,5 @@ module.exports.policies = {
     'update' : ['isAdmin'],
     '*' : false,
   },
-
+  */
 };

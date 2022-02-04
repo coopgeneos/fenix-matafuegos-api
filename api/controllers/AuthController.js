@@ -1,16 +1,18 @@
 const passport = require('passport');
 
 module.exports = {
-	login: function(req, res) {
-    passport.authenticate('local', function(err, user, info){
+  login: (req, res) => {
+    passport.authenticate('local', (err, user, info) => {
       if((err) || (!user)) {
         return res.send({
           error: true,
           message: err || info.message
         });
       }
-      req.logIn(user, function(err) {
-        if(err) res.send(err);
+      req.logIn(user, (err) => {
+        if(err) {
+          res.send(err);
+        }
         return res.send({
           message: info.message,
           user
@@ -19,12 +21,12 @@ module.exports = {
     })(req, res);
   },
 
-	logout: function(req, res) {
+  logout: (req, res) => {
     req.logout();
-    res.send({error: false, msg: "Logout successfull"});
+    res.send({error: false, msg: 'Logout successfull'});
   },
 
-  getLoggedUser: function(req, res) {
+  getLoggedUser: (req, res) => {
     if(req.user) {
       User.findOne({id: req.user.id})
         .then(user => {
@@ -35,13 +37,20 @@ module.exports = {
         })
         .catch(err => {
           return err;
-        })
+        });
     } else {
-      res.send({error: false, msg: "No logged user"});
+      res.send({error: false, msg: 'No logged user'});
     }
   },
 
-  isAdmin: function(req, res) {
+  /**
+   * 
+   * @param {*} req 
+   * @param {*} res 
+   * Este método quedó obsoleto porque desde el front ya no se lo consulta.
+   * Pero no se borra porque es la manera correcta de trabajar.
+   */
+  isAdmin: (req, res) => {
     if(req.user) {
       User.findOne({id: req.user.id, role: 'ADMIN'})
         .then(user => {
@@ -53,7 +62,7 @@ module.exports = {
         })
         .catch(err => {
           res.send({error: false, msg: err});
-        })
+        });
     }
   },
 

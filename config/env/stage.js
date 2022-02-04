@@ -46,8 +46,9 @@ module.exports = {
       allowCredentials: true,
       allowOrigins: [
         'https://fenix.geneoscoop.ddns.net',
-        'https://geneoscoop.ddns.net:8084', 
-        'http://dev.geneoscoop:4200'
+        'https://geneoscoop.ddns.net:8084',
+        'http://dev.geneoscoop:4200',
+        'http://localhost:4200'
       ]
     },
   },
@@ -61,7 +62,7 @@ module.exports = {
   },
 
   sockets: {
-    onlyAllowOrigins: ["http://dev.geneoscoop"],
+    onlyAllowOrigins: ['http://dev.geneoscoop', 'http://localhost:4200'],
   },
 
   log: {

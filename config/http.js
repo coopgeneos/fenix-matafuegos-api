@@ -29,22 +29,22 @@ module.exports.http = {
     *                                                                          *
     ***************************************************************************/
 
-    passportInit    : require('passport').initialize(),
-		passportSession : require('passport').session(),
-    
+    passportInit: require('passport').initialize(),
+    passportSession: require('passport').session(),
+
     order: [
-			'cookieParser',
-			'session',
-			'passportInit',
-			'passportSession',
+      'cookieParser',
+      'session',
+      'passportInit',
+      'passportSession',
       'bodyParser',
       'softDelete',
-			'compress',
-			'poweredBy',
-			'router',
-			'www',
-			'favicon',
-		],
+      'compress',
+      'poweredBy',
+      'router',
+      'www',
+      'favicon',
+    ],
 
     /***************************************************************************
     *                                                                          *
@@ -60,14 +60,14 @@ module.exports.http = {
     //   return middlewareFn;
     // })(),
 
-    softDelete: (function (){
-      return function (req,res,next) {
-        if(req.method == "DELETE") {
+    softDelete: (() => {
+      return (req, res, next) => {
+        if (req.method === "DELETE") {
           req.method = "PATCH";
-          req.body = {deleted: true, deletedAt: new Date()}
+          req.body = { deleted: true, deletedAt: new Date() };
           next();
         } else {
-          next()
+          next();
         }
       };
     })(),
